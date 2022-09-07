@@ -17,7 +17,7 @@ import { BiMenuAltRight } from "react-icons/bi";
       return(
           <div css={mq({
             backgroundColor: "#000",
-            height: ["auto","80vh","80vh","100vh"],
+            height: ["auto","auto","auto","100vh"],
           })}>
               
               <div css={mq({
@@ -28,7 +28,7 @@ import { BiMenuAltRight } from "react-icons/bi";
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            width: ["100%", "65%"],
+            width: ["100%", "100%","100%","65%"],
            paddingTop: 10,
            paddingBottom: 10,
             marginLeft: 10,
@@ -147,10 +147,10 @@ import { BiMenuAltRight } from "react-icons/bi";
            
           })}>
           <div css={mq({
-              width: ["90%","50%","50%","65%"],
+              width: ["90%","90%","90%","65%"],
               fontSize: [36,56,56,56],
               fontWeight: [900,900,900,900],
-              margin: ["20px 0", "150px 0px 0px 0px"],
+              margin: ["20px 0", "50px 0px 0px 0px","50px 0px 0px 0px","150px 0px 0px 0px"],
 
           })}>
               <div>

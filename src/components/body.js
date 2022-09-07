@@ -186,7 +186,7 @@ import React, { useState, } from "react";
                    marginTop: 50
               })}>
                   <div css={mq({
-                       width: ["90%","50%","50%","65%"],
+                       width: ["90%","80%","80%","65%"],
                   })}>
           <div css={mq({
             fontSize: [36,56,56,56],
@@ -229,7 +229,7 @@ Previously, I was a Senior Product Manager at Yonder / New Knowledge, an informa
                    marginTop: 50
               })}>
         <div css={mq({
-                       width: ["90%","50%","50%","65%"],
+                      width: ["90%","80%","80%","65%"],
                   })}>
           <div css={mq({
             fontSize: [36,56,56,56],
@@ -339,7 +339,7 @@ height: "auto",
                   marginTop: 50
              })}>
        <div css={mq({
-                      width: ["90%","50%","50%","65%"],
+                      width: ["90%","80%","80%","65%"],
                  })}>
                      <div css={mq({
             fontSize: [36,56,56,56],
@@ -486,7 +486,7 @@ height: "auto",
                   backgroundColor: "#000"
              })}>
                  <div css={mq({
-                      width: ["90%","50%","50%","65%"],
+                      width: ["90%","80%","80%","65%"],
                       marginTop: 50,
                       marginBottom: 20
                  })}>
@@ -582,7 +582,7 @@ height: "auto",
                   backgroundColor: "#000"
              })}>
                  <div css={mq({
-                      width: ["80%","50%","50%","65%"],
+                      width: ["90%","80%","80%","65%"],
                      margin: "20px 0px"
                  })}>
           <footer>
