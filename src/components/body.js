@@ -1,3 +1,5 @@
+import React, { useState, } from "react";
+
 /** @jsxImportSource @emotion/react */
 import { css, cx } from "@emotion/react";
 import facepaint from "facepaint";
@@ -6,7 +8,6 @@ import { HiOutlineSearch, HiBeaker, HiOutlineCode,  } from 'react-icons/hi';
 import { FaRetweet, FaTwitter,FaFacebookF,FaLinkedinIn } from 'react-icons/fa';
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
-import React, { useState, } from "react";
   const Body = () => {
        const breakpoints = [576, 768, 992, 1200];
   const query = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -549,7 +550,7 @@ height: "auto",
     color: "#c4c4c4", fontSize:18,
     fontFamily: 'Source Sans 3',
       fontWeight:300,
-})} class="form-control" rows="10" placeholder="Message" name="message" required></textarea>
+})} rows="10" placeholder="Message" name="message" required></textarea>
 </div>
 
 </form>

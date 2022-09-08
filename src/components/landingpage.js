@@ -1,8 +1,9 @@
+import React, { useState } from "react";
+
 /** @jsxImportSource @emotion/react */
 import { css, cx } from "@emotion/react";
 import facepaint from "facepaint";
 import Image from 'next/image' 
-import React, { useState } from "react";
 import { motion, AnimatePresence  } from "framer-motion";
 import { BiMenuAltRight } from "react-icons/bi";
 
