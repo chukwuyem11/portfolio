@@ -29,7 +29,7 @@ import { BiMenuAltRight } from "react-icons/bi";
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            width: ["100%", "100%","100%","65%"],
+            width: ["90%","90%","90%","80%"],
            paddingTop: 10,
            paddingBottom: 10,
             marginLeft: 10,
@@ -148,12 +148,22 @@ import { BiMenuAltRight } from "react-icons/bi";
            
           })}>
           <div css={mq({
-              width: ["90%","90%","90%","65%"],
-              fontSize: [36,56,56,56],
+              width: ["90%","90%","90%","80%"],
+              fontSize: [36,50,50,50],
               fontWeight: [900,900,900,900],
-              margin: ["20px 0", "50px 0px 0px 0px","50px 0px 0px 0px","150px 0px 0px 0px"],
+              margin: ["20px 0", "50px 0px 0px 0px","50px 0px 0px 0px","60px 0px 0px 0px"],
 
           })}>
+              <div css={mq({
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  flexDirection: ["column", "row"]
+
+              })}>
+              <div css={mq({
+                 marginRight: [0,25]
+              })}>
               <div>
           <div  css={css`
       line-height: 1;
@@ -172,6 +182,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 })}>I’m a multi-disciplinary Investor, Product Manager, and Technologist living in Big Sky, Montana. Since 2011 I’ve worked at large scale, hyper-growth technology companies. In my career I’ve expereinced 2 IPOs and 3 aquisitions.
 
 I specialize in software as a service (SaaS) products and have experience with data science, machine learning, mobile apps, cyber security, web hosting, and web apps.</div>
+
 <button css={mq({
     backgroundColor: "hsla(232, 90%, 59%, 1)",
     color: "#fff",
@@ -180,9 +191,26 @@ I specialize in software as a service (SaaS) products and have experience with d
     fontWeight:300,
     fontSize:[13,15],
     marginBottom: 20,
+    marginTop: [20, 0],
+    outline: "none",
     fontFamily: "Source Sans 3",
     textTransform: "uppercase"
-})}>more about me</button>
+})}>more about me</button></div>
+<motion.img css={mq({
+    width: ["90vw",500],
+    height: ["auto",400],
+    borderRadius: [10,20],
+    marginTop: [20, 0],
+    marginleft: [0,25]
+})}
+
+initial={{ opacity:  0  }}
+animate={{  opacity:  1  }}
+                   
+transition={{ duration: 0.5 }}
+                    src="team3.jpg"/></div>
+
+
 </div>
           </div>
          

@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useState,useRef } from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css, cx } from "@emotion/react";
@@ -6,7 +6,7 @@ import facepaint from "facepaint";
 import Image from 'next/image' 
 import { HiOutlineSearch, HiBeaker, HiOutlineCode,  } from 'react-icons/hi';
 import { FaRetweet, FaTwitter,FaFacebookF,FaLinkedinIn } from 'react-icons/fa';
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout, useInView } from "framer-motion";
 
   const Body = () => {
        const breakpoints = [576, 768, 992, 1200];
@@ -172,6 +172,8 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
     },
     
   ]
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true });
 
   const pick_category = (cat) => {
       setTab(cat)
@@ -187,13 +189,30 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
                    marginTop: 50
               })}>
                   <div css={mq({
-                       width: ["90%","80%","80%","65%"],
+                       width: ["90%","90%","90%","80%"],
                   })}>
+                    <div  css={mq({
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        flexDirection: ["column-reverse", "row"]
+                    })}> <motion.img ref={ref} css={mq({
+                        opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                        width: "auto",
+                        height: [300,400],
+                    marginTop: [30,0],
+                        borderRadius: "100%",
+                    })}  
+                    
+                    src="ceo.jpg"/> <div css={mq({
+                        marginLeft: [0,50]
+                    })}>
           <div css={mq({
-            fontSize: [36,56,56,56],
+            fontSize: [36,50,50,50],
             fontWeight: [900,900,900,900],
             lineHeight: 1,
-            textAlign: ["left","center"],
+            textAlign: ["left","left"],
             color: "hsla(232, 90%, 59%, 1)"
           })}>
           
@@ -202,7 +221,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
           </div>
           <div css={mq({
               fontSize:[17,18],
-              textAlign: ["left","center"],
+              textAlign: ["left","left"],
               fontWeight:300,
               marginTop: 20
           })}>
@@ -210,11 +229,11 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 GitLab is an open core company which develops software for the software development lifecycle used by more than 100,000 organizations and has an active community of more than 2200 contributors. GitLab believes in a world where everyone can contribute.</div>
 <div css={mq({
     fontSize:[17,18],
-    textAlign: ["left","center"],
+    textAlign: ["left","left"],
     fontWeight:300,
     marginTop: 20
 })}>
-Previously, I was a Senior Product Manager at Yonder / New Knowledge, an information integrity company using data science to detect fake news, disinformation, and inauthentic behavior online. Prior to that I was a Senior Product Manager at Duo Security focused on duo’s mobile app helping protects organizations against data breaches with multifactor authentication. Before that I was a Product Manager at WP Engine, WP Engine is the leading digital experiences platform on WordPress. Over 5% of the web visits a site on WP Engine’s platform every day. Prior, I was an Interaction Designer at Indeed.com, the world’s #1 job search engine, where I helped 180 million job seekers find jobs every month.</div>
+Previously, I was a Senior Product Manager at Yonder / New Knowledge, an information integrity company using data science to detect fake news, disinformation, and inauthentic behavior online. Prior to that I was a Senior Product Manager at Duo Security focused on duo’s mobile app helping protects organizations against data breaches with multifactor authentication. Before that I was a Product Manager at WP Engine, WP Engine is the leading digital experiences platform on WordPress. Over 5% of the web visits a site on WP Engine’s platform every day. Prior, I was an Interaction Designer at Indeed.com, the world’s #1 job search engine, where I helped 180 million job seekers find jobs every month.</div></div></div>
           </div></div>
           
           
@@ -230,10 +249,10 @@ Previously, I was a Senior Product Manager at Yonder / New Knowledge, an informa
                    marginTop: 50
               })}>
         <div css={mq({
-                      width: ["90%","80%","80%","65%"],
+                      width: ["90%","90%","90%","80%"],
                   })}>
           <div css={mq({
-            fontSize: [36,56,56,56],
+            fontSize: [36,50,50,50],
             fontWeight: [900,900,900,900],
             lineHeight: 1,
             textAlign: "left",
@@ -340,10 +359,10 @@ height: "auto",
                   marginTop: 50
              })}>
        <div css={mq({
-                      width: ["90%","80%","80%","65%"],
+                       width: ["90%","90%","90%","80%"],
                  })}>
                      <div css={mq({
-            fontSize: [36,56,56,56],
+            fontSize: [36,50,50,50],
             fontWeight: [900,900,900,900],
             lineHeight: 1,
             textAlign: "left",
@@ -393,7 +412,7 @@ height: "auto",
         gridTemplateColumns: ["repeat(2 , 1fr)","repeat(2 , 1fr)","repeat(2 , 1fr)","repeat(3 , 1fr)"],
         justifyContent: "space-between",
         rowGap: 30,
-        columnGap: 10,
+        columnGap: 30,
         width: "100%",
 height: "auto",
         marginBottom: 50,
@@ -411,7 +430,7 @@ height: "auto",
     objectFit: "cover",
     objectPosition: "top center",
     width: "100%",
-        height: [150, 300, 300, 250]
+        height: [150, 300, 300, 300]
       })}/>
           <div css={mq({
               
@@ -487,16 +506,16 @@ height: "auto",
                   backgroundColor: "#000"
              })}>
                  <div css={mq({
-                      width: ["90%","80%","80%","65%"],
+                       width: ["90%","90%","90%","80%"],
                       marginTop: 50,
                       marginBottom: 20
                  })}>
               <div>
               <div css={mq({
-            fontSize: [36,56,56,56],
+            fontSize: [36,50,50,50],
             fontWeight: [900,900,900,900],
             lineHeight: 1,
-            textAlign: "left",
+            textAlign: ["left", "center"],
           color: "#fff"
             
           })}>
@@ -504,6 +523,13 @@ height: "auto",
           CONTACT US
           
           </div>
+          <div css={mq({
+                  
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  
+             })}>
 <form css={mq({
     marginTop:20
 })}>
@@ -513,7 +539,7 @@ height: "auto",
     borderWidth: 1,
     outline: "none",
     height: 50,
-    width: ["100%",400],
+    width: ["100%",300],
     padding: 10,
     margin: ["5px 0px","5px 0px"],
     borderRadius: 10,
@@ -528,7 +554,7 @@ height: "auto",
     borderWidth: 1,
     outline: "none",
     height: 50,
-    width: ["100%",400],
+    width: ["100%",300],
     padding: 10,
     margin: ["5px 0px","5px 5px"],
     borderRadius: 10,
@@ -543,9 +569,9 @@ height: "auto",
     borderWidth: 1,
     outline: "none",
     
-    width: ["100%",810],
+    width: ["100%",610],
     padding: 10,
-    margin: ["5px 0px","5px 5px"],
+    margin: ["5px 0px","5px 0px"],
     borderRadius: 10,
     color: "#c4c4c4", fontSize:18,
     fontFamily: 'Source Sans 3',
@@ -553,17 +579,27 @@ height: "auto",
 })} rows="10" placeholder="Message" name="message" required></textarea>
 </div>
 
-</form>
+</form> </div>
+<div css={mq({
+                  
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  
+             })}>
+
 <button css={mq({
     backgroundColor: "hsla(232, 90%, 59%, 1)",
     color: "#fff",
     padding: "15px 20px",
     borderRadius: 10,
+    outline: "none",
     fontWeight:300,
+    marginTop: 10,
     fontSize:[13,15],
     fontFamily: "Source Sans 3",
     textTransform: "uppercase"
-})}>send your message</button>
+})}>send your message</button></div>
               
               
               
@@ -583,7 +619,7 @@ height: "auto",
                   backgroundColor: "#000"
              })}>
                  <div css={mq({
-                      width: ["90%","80%","80%","65%"],
+                       width: ["90%","90%","90%","80%"],
                      margin: "20px 0px"
                  })}>
           <footer>
